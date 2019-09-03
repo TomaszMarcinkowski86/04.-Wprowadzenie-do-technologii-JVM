@@ -1,0 +1,8 @@
+javac HelloPeople.java
+java HelloPeople Piotr Adam Ania
+java HelloPeople (nic nie powinno siê wyœwietliæ)
+
+cd .. (przejœcie do nadrzêdnego folderu)
+
+java -cp nazwa_folderu_nadrzednego HelloPeople Piotr Adam Ania
+

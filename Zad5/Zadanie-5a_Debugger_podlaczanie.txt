@@ -1,0 +1,16 @@
+ZADANIE 5a: Debugger (jdb) - pod³¹czanie sesji debuggera
+
+Do klasy HelloPeople pod³¹cz debugger.
+Pamiêtaj, aby podaæ argumenty funkcji main() (imiona, których powitanie ma byæ wyœwietlone)!
+
+Wykorzystaj polecenie jdb w sposób pozwalaj¹cy uruchomiæ now¹ instancjê JVM i rozpocz¹æ debugowanie.
+U¿yj polecenia run aby przejœæ do koñca programu.
+
+
+CZÊŒÆ DLA CHÊTNYCH:
+Uruchom klasê HelloPeople z u¿yciem polecenia java z odpowiednimi parametrami.
+ZnajdŸ sposób na uruchomienie konsolowego procesu w tle.
+Zmodyfikuj kod klasy w taki sposób, aby mo¿na by³o "zd¹¿yæ" pod³¹czyæ debugger, zanim aplikacja siê zakoñczy.
+
+Do w³¹czonej w ten sposób instancji JVM, pod³¹cz debugger poleceniem jdb -attach i rozpocznij debugowanie.
+U¿yj polecenia run aby przejœæ do koñca programu.

@@ -1,0 +1,11 @@
+ZADANIE 2: Argumenty programu i zmienna CLASSPATH
+
+Napisz kolejny program w Notatniku - kolejn¹ klasê zawieraj¹ca metodê main().
+Nazwij klasê HelloPeople, a plik z kodem Ÿród³owym HelloPeople.java.
+Program ma wypisaæ liniê „Hello, …” dla tylu imion, ile zostanie podanych w postaci argumentów programu w konsoli, podczas jego uruchamiania.
+
+Skompiluj i uruchom program, sprawdzaj¹c jego dzia³anie dla 1, 2, 3 argumentów podanych w konsoli.
+
+SprawdŸ co siê stanie, gdy nie podamy argumentów.
+
+Przetestuj opcjê –cp polecenia java, uruchamiaj¹c program z innego folderu ni¿ dotychczas, np. katalogu nadrzêdnego.

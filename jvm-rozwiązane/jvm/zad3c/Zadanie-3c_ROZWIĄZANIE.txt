@@ -1,0 +1,5 @@
+javac HelloPeople.java com\sda\Person.java
+jar vcfe HelloPeople.jar HelloPeople HelloPeople.class com\sda\Person.class
+jar vtf HelloPeople.jar
+jar vxf HelloPeople.jar
+java -jar HelloPeople.jar Piotr Adam Ania

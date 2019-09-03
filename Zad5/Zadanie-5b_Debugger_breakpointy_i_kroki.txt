@@ -1,0 +1,12 @@
+ZADANIE 5b: Debugger (jdb) - breakpointy i kroki
+
+Pod³¹cz debugger do klasy AddingProgram uruchamiaj¹c now¹ instancjê JVM.
+
+Ustaw 2 breakpointy:
+- na 7. liniê funkcji main() klasy AddingProgram
+- na rozpoczêcie metody add() klasy AddingClass
+
+U¿yj polecenia clear aby zobaczyæ ustawione breakpointy. U¿yj polecenia list, aby zobaczyæ w jakim miejscu znajduje siê program.
+
+U¿yj poleceñ run/cont/step aby przejœæ do koñca programu.
+Po ka¿dym u¿yciu run/cont/step, wykonaj polecenia list oraz dump (dla odpowiednich zmiennych).

@@ -1,0 +1,49 @@
+javac -g AddingProgram.java AddingClass.java
+jdb AddingProgram (pod³¹czenie debuggera z uruchomieniem nowej instancji JVM, klasa AddingProgram posiada metodê main())
+stop at AddingProgram:7 (ustawienie breakpointa na liniê 7 klasy AddingProgram)
+stop in AddingClass.add (ustawienie breakpointa na pocz¹tek metody add() w klasie AddingClass)
+clear (wyœwietlenie wszystkich ustawionych breakpointów)
+run (rozpoczêcie w³aœciwego debugowania - wykonywane tylko raz podczas debugowania, równowa¿ne naciœniêcia ikony debugowania w IntelliJ)
+list (wyœwietlenie miejsca w kodzie, w którym siê znajdujemy)
+dump AddingProgram.i (wyœwietlenie wartoœci zmiennej i w klasie AddingProgram)
+dump AddingProgram.j (wyœwietlenie wartoœci zmiennej j w klasie AddingProgram)
+step (przejœcie do kolejnego kroku, dzia³a na zasadzie 'step into')
+list (powinniœmy znajdowaæ siê w linii 8 klasy AddingProgram)
+step (wejdzie do konstruktora klasy AddingClass, ale jeszcze nie wykona ¿adnej z linii kodu tego konstruktora)
+list (sprawdzamy ¿e weszliœmy do konstruktora AddingClass)
+step
+step
+step (teraz po 3x komendzie step powinniœmy znajdowaæ siê na wyjœciu z konstruktora)
+list (sprawdzamy, strza³ka => powinna pokazywaæ na nawias klamrowy } zamykaj¹cy konstruktor)
+step (wracamy do AddingProgram)
+list (powinniœmy nadal byæ w linii 8 AddingProgram, konstruktor zosta³ wykonany, pozosta³a operacja przypisania do referencji addingClass)
+step (operacja przypisania powinna zostaæ wykonana, obiekt addingClass nie jest ju¿ nullem)
+list (sprawdzamy gdzie jeteœmy, strza³ka => powinna byæ na linii 9 AddingProgram, przed wykonaniem jej)
+dump addingClass.sum (poniewa¿ obiekt addingClass ju¿ istnieje pod referencj¹, mo¿na sprawdziæ wartoœæ jego pola 'sum', powinna wynosiæ 0)
+cont ('puszczamy' dzia³anie programu dalej, czyli a¿ do kolejnego breakpointa lub do zakoñczenia programu;
+w tym przypadku mamy breakpoint na pocz¹tku metody add() i jest to kolejna metoda wywo³ywana w linii 9, dlatego powinniœmy w³aœnie tam trafiæ)
+list (sprawdzamy czy jesteœmy w metodzie add())
+dump AddingClass.sum
+step
+step (po 2x wykonaniu step w tym momencie powinniœmy przejœæ ca³¹ metodê add(), a wiêc wyœwietlenie wiadomoœci i zwiêkszenie sumy)
+list (sprawdzamy czy strza³ka => pokazuje na nawias klamrowy } zamykaj¹cy metodê add())
+dump sum (sprawdzamy zawartoœæ pola 'sum'; poniewa¿ obecnie znajdujemy siê w kodzie AddingClass, nie trzeba podawaæ nazwy klasy :); wartoœæ powinna wynosiæ 1 )
+step (wracamy do AddingProgram, metoda add() zosta³a wykonana)
+list (sprawdzamy, strza³ka => powinna byæ na linii 10 AddingProgram, przed wykonaniem jej)
+cont (pozwalamy programowi znów dojœæ do breakpointa)
+cont (pozwalamy programowi wykonaæ drugie wywo³anie metody add() i przejœæ jeszcze raz do breakpointa, czyli znów na pocz¹tek metody; wartoœæ sum powinna teraz wynosiæ 6)
+list (sprawdzamy czy nadal jesteœmy w metodzie add() na pocz¹tku; jest to pocz¹tek trzeciego wywo³ania z main())
+dump sum (sprawdzamy czy rzeczywiœcie mamy 6)
+cont (pozwalamy programowi przejœæ dalej, a poniewa¿ nie ma ju¿ miejsca, gdzie móg³by napotkaæ breakpointa (metoda add() nie jest wiêcej wywo³ywana), program powinien siê zakoñczyæ
+
+W tym miejscu powinniœmy zobaczyæ wynik linii 12 z AddingProgram, czyli wypisanie na konsolê ostateczn¹ wartoœæ sumy czyli:
+Sum is: 16
+
+Nastêpnie powinniœmy widzieæ komunikat "The application exited".
+
+Zachêcam do poeksperymentowania z debuggerem jdb :)
+Pamiêtajcie, ¿e aby "podgl¹daæ" zawartoœæ zmiennych w obiektach (poza statycznymi), klasy powinny byæ skompilowane z flag¹ -g, czyli:
+javac -g AddingProgram.java AddingClass.java
+list
+dump AddingClass.sum
+...

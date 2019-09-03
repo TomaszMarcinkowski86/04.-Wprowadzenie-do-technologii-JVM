@@ -1,0 +1,10 @@
+ZADANIE 4: Narzêdzie Javadoc
+
+Napisz komentarze Javadoc w klasach z poprzedniego æwiczenia czyli w HelloPeople.java oraz w Person.java.
+Daj komentarze nad ka¿d¹ klas¹ oraz dla metody main() w HelloPeople.
+
+Dodaj tak @author w komentarzu do klasy oraz tag @param w komentarzu do metody main().
+
+Wygeneruj dokumentacjê dla klas.
+
+Otwórz dokumentacjê w przegl¹darce.

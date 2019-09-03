@@ -1,0 +1,9 @@
+ZADANIE 3: Archiwum JAR - podstawy
+
+Spakuj do archiwum HelloPeople.jar poprzedni program HelloPeople do wypisywania imion (ustaw entry-point).
+
+Wyœwietl zawartoœæ archiwum.
+
+Rozpakuj archiwum i zobacz jak wygl¹da plik MANIFEST.MF.
+
+Uruchom program z argumentami, u¿ywaj¹c polecenia „java –jar …”.

@@ -1,0 +1,12 @@
+ZADANIE 3b: Archiwum JAR - kilka plików
+
+Utwórz dodatkow¹ klasê Person w pliku Person.java. Klasa powinna zawieraæ pole typu String o nazwie "name".
+Klasa ta powinna mieæ konstruktor, który przyjmuje String i pozwala ustawiæ wartoœæ pola name.
+Klasa powinna mieæ tak¿e metodê getName() zwracaj¹c¹ wartoœæ pola "name".
+
+W pliku HelloPeople.java z poprzedniego æwiczenia, dla ka¿dego argumentu podanego w konsoli,
+utwórz obiekt klasy Person. Nastêpnie, wyœwietl powitanie danej osoby, korzystaj¹c z metody getName() utworzonego
+obiektu.
+
+Klasy HelloPeople i Person umieœæ w archiwum JAR.
+Podobnie jak poprzednio, przejrzyj zawartoœæ archiwum oraz uruchom program poleceniem "java -jar ..."

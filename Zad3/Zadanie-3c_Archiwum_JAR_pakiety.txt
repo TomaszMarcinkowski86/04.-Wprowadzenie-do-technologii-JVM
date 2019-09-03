@@ -1,0 +1,12 @@
+ZADANIE 3c: Argumenty programu i zmienna CLASSPATH
+
+Klasê Person java utwórz w paczce "com.sda". Bêdzie potrzebne utworzenie struktury folderów com\sda i przeniesienie
+tam pliku Person.java
+
+Nastêpnie w pliku HelloPeople.java zaimportuj klasê Person z paczki com.sda.
+Przy kompilacji pamiêtaj, ¿eby podaæ œcie¿kê do pliku Person.java, który teraz znajduje siê w innym folderze!
+
+Dodatkowo, w pliku HelloPeople.java zaimportuj klasê java.util.Date. Na pocz¹tku metody main()
+utwórz nowy obiekt klasy Date i wypisz na konsolê aktualn¹ datê (wywo³anie metody toString() na obiekcie klasy Date).
+
+Utwórz ponownie archiwum, przejrzyj jego zawartoœæ i uruchom program.
